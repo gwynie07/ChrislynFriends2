@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My New Friends</title>
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#a09e9e;
+}
+/* NAVIGATION */
+
+nav{
+    background:#0f0e0c;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* BANNER */
+.banner{
+    width:90%;
+    height:350px;
+    margin:30px auto;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.banner img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:none;
+}
+
+/* CONTENT */
+.content{
+    text-align:left;
+    padding:40px;
+}
+
+/* CHRIS LYN PAGE */
+.chrislyn{
+
+    width:80%;
+    margin:auto;
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(207, 193, 193, 0.5),rgba(255,255,255,.5)),
+    url("bacKground.jfif");
+
+    background-size:cover;
+    background-position:center;
+    border-radius:20px;
+    text-align:left;
+
+}
+.card{
+    background:rgba(255,255,255,.8);
+    padding:30px;
+    border-radius:20px;
+    text-align:left;
+}
+.profile{
+    width:190px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid rgb(8,8,8);
+
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+footer{
+
+    background:#0c0c0c;
+    color:white;
+    text-align:center;
+    padding:20px;
+
+}
+.page{
+    display:none;
+}
+</style>
+<script>
+
+function showPage(id){
+let pages=document.getElementsByClassName("page");
+for(let page of pages){
+page.style.display="none";
+}
+
+document.getElementById(id).style.display="block";
+if(id=="home"){
+document.getElementById("banner").style.display="block";
+}
+
+else{
+document.getElementById("banner").style.display="none";
+}
+
+}
+let slideIndex=0;
+function slideshow(){
+let images=document.getElementsByClassName("slide");
+for(let img of images){
+img.style.display="none";
+}
+
+slideIndex++;
+if(slideIndex>images.length){
+slideIndex=1;
+}
+
+images[slideIndex-1].style.display="block";
+setTimeout(slideshow,3000);
+}
+
+</script>
+</head>
+<body onload="slideshow()">
+<nav>
+
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('page1')">Chris Lyn</a>
+<a onclick="showPage('page2')">Gwyneth</a>
+<a onclick="showPage('page3')">Mae Rose</a>
+<a onclick="showPage('page4')">Chloe</a>
+
+</nav>
+
+<!-- BANNER -->
+<div id="banner" class="banner">
+<img class="slide" src="banner1.jfif">
+<img class="slide" src="banner2.jfif">
+<img class="slide" src="banner3.jfif">
+</div>
+
+<!-- HOME -->
+<div id="home" class="page" style="display:block;">
+<div class="content">
+
+<h1>Welcome To My Website</h1>
+<p>
+♡With my new friends♡<br>
+</p>
+</div>
+
+<footer>
+<br><br>
+Created by: Amoin, Chris Lyn L.
+
+</footer>
+</div>
+
+<!-- CHRIS LYN -->
+
+<div id="page1" class="page">
+<div class="chrislyn">
+<div class="card">
+<img src="myprofile.jfif" class="profile">
+
+<h1>Chris Lyn L. Amoin</h1>
+
+<h2>About Me</h2>
+<p>
+Age: 19 Years Old<br>
+Course: BSIT COMTECH 2A<br>
+School: Lapu-Lapu City College<br>
+Address: Calawisan Zone Litob, Lapu-Lapu City, Cebu
+</p>
+
+<h2>Skills</h2>
+<p>
+• sketch<br>
+• Designing<br>
+</p>
+
+<h2>Hobbies</h2>
+<p>
+• Crochet<br>
+• Reading Random Stories<br>
+• Playing Online Games 
+</p>
+
+<h2>Career Goal</h2>
+<p>
+To become a successful and continue improving my skills.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- GWYNETH -->
+<div id="page2" class="page">
+<div class="chrislyn">
+<div class="card">
+
+<img src="Gwyneth.jpg" class="profile">
+
+<h1>Gwyneth</h1>
+
+<h2>About Me</h2>
+<p>
+Age: 22 Years Old<br>
+Course: BSIT COMTECH 2A<br>
+School: Lapu-Lapu City College<br>
+Address: BABAG 2
+</p>
+
+<h2>Skills</h2>
+<p>
+• Drawing<br>
+• Designing<br>
+</p>
+
+<h2>Hobbies</h2>
+<p>
+• Watching Movies<br>
+• Listening to Music<br>
+</p>
+
+<h2>Career Goal</h2>
+<p>
+To become a successful and achieve my dreams.
+</p>
+
+</div>
+</div>
+</div>
+<!-- MAE ROSE -->
+<div id="page3" class="page">
+<div class="chrislyn">
+<div class="card">
+<img src="Mae.jfif" class="profile">
+<h1>Mae Rose</h1>
+
+<h2>About Me</h2>
+<p>
+Age: 19 Years Old<br>
+Course: BSIT COMTECH 2A<br>
+School: Lapu-Lapu City College<br>
+Address: Secret
+</p>
+
+<h2>Skills</h2>
+<p>
+• Problem Solving<br>
+• Designing<br>
+</p>
+
+<h2>Hobbies</h2>
+<p>
+• Watching K-Drama<br>
+• Listening to Music<br>
+</p>
+
+<h2>Career Goal</h2>
+<p>
+To become successful and help my family.
+</p>
+
+</div>
+</div>
+</div>
+
+<!-- CHLOE -->
+<div id="page4" class="page">
+<div class="chrislyn">
+<div class="card">
+<img src="Chloe.jfif" class="profile">
+<h1>Chloe</h1>
+
+<h2>About Me</h2>
+<p>
+Age: 18 Years Old<br>
+Course: BSIT COMTECH 2A<br>
+School: Lapu-Lapu City College<br>
+Address: Secret
+</p>
+<h2>Skills</h2>
+<p>
+• Siging<br>
+• Dancing<br>
+</p>
+
+<h2>Hobbies</h2>
+<p>
+• Traveling<br>
+</p>
+<h2>Career Goal</h2>
+<p>
+To become a successful professional and continue learning new skills.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
